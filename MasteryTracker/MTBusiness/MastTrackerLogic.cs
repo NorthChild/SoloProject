@@ -55,7 +55,7 @@ namespace MTBusiness
 
             var currentTotal = totalHoursToMastery - totalHoursAccumulatedPastPlusCurrent;
 
-            var progressResults = new List<string>() { totalHoursAccumulatedPastPlusCurrent.ToString(), currentYearlyHours.ToString(), percentageLeftToMastery.ToString(), $"{counter.ToString()}"};
+            var progressResults = new List<string>() { pastAccumulatedHours.ToString(), currentYearlyHours.ToString(), percentageLeftToMastery.ToString(), $"{counter.ToString()}"};
 
 
             return progressResults;
