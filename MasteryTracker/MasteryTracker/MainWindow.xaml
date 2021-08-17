@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasteryTracker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" ResizeMode="NoResize" Height="547" Width="878" Background="Black">
+
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="WELCOME TO THE MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
+        <Label Content="What Skill would you like to Master? " Margin="45,50,18,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF4BF718" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" FontFamily="Consolas" Height="26"/>
+        <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
+        </Border>
+        <TextBlock HorizontalAlignment="Left"  Margin="63,50,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="188" Height="26" Grid.RowSpan="2" FontFamily="Consolas" Foreground="#FF4AE81C" FontSize="16" FontWeight="Bold" Language="en-gb" Text="Enter Skill Name _>"></TextBlock>
+        <TextBox x:Name="skillNmTbx" Text="SKILL NAME" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="63,0,3,33" BorderBrush="#FF4BF718" Grid.ColumnSpan="2" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold"/>
+
+
+
+        <TextBlock HorizontalAlignment="Left"  Margin="125,50,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="379" Height="26" FontFamily="Consolas" Foreground="#FF4AE81C" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2" Language="en-gb" Text="How many years spent on skill? _>"></TextBlock>
+        <TextBlock HorizontalAlignment="Left"  Margin="125,49,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="533" Height="26" FontFamily="Consolas" Foreground="#FF4AE81C" FontSize="15" FontWeight="Bold" Grid.Column="2" Language="en-gb" Text="In the past, how many hours spent on the skill? _>"></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="477" Height="26" FontFamily="Consolas" Foreground="#FF4AE81C" FontSize="15" FontWeight="Bold" Grid.Column="2" Margin="125,50,0,0" Language="en-gb" Text="Currently, how many hours do you spend on the skill? _&gt;"></TextBlock>
+        <TextBox x:Name="tbxNum1" Text="TOTAL YRS" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="125,74,66,37" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="2" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="tbxNum2" Text="PAST HRS PER WEEK" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="125,75,65,36" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="tbxNum3" Text="CURRENT HRS PER WEEK" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="125,76,66,36" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="4" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+
+        <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click"/>
+        <Button Content="DISCARD" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1"/>
+
+        <Label x:Name="lblResult" Content="" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" Foreground="#FFFF0303" FontFamily="Consolas" FontSize="14" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+
+
+
+
 
     </Grid>
 </Window>

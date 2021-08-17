@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace MasteryTrackedDB
 {
     class Program
@@ -7,6 +8,11 @@ namespace MasteryTrackedDB
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+
+            
+
+
         }
     }
 }

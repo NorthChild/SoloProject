@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="carabiner.png.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MTBusiness\MTBusiness.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="carabiner.png.png" />
   </ItemGroup>
 
 </Project>
