@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryTracker", "MasteryTracker\MasteryTracker.csproj", "{FEDE6B65-76CF-41FB-B04A-0862BD4CE538}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasteryTracker", "MasteryTracker\MasteryTracker.csproj", "{FEDE6B65-76CF-41FB-B04A-0862BD4CE538}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MT_TESTS", "MT_TESTS\MT_TESTS.csproj", "{19FA4ECA-1B1E-43A0-AD35-6A155582EE1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT_TESTS", "MT_TESTS\MT_TESTS.csproj", "{19FA4ECA-1B1E-43A0-AD35-6A155582EE1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTBusiness", "MTBusiness\MTBusiness.csproj", "{F3EA7F78-56BA-4822-96D8-CEF0DF5803C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTBusiness", "MTBusiness\MTBusiness.csproj", "{F3EA7F78-56BA-4822-96D8-CEF0DF5803C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasteryTrackedDB", "MasteryTrackedDB\MasteryTrackedDB.csproj", "{5EF40EFE-F427-4A0C-9FDB-89F9A25F435A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasteryTrackedDB", "MasteryTrackedDB\MasteryTrackedDB.csproj", "{5EF40EFE-F427-4A0C-9FDB-89F9A25F435A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

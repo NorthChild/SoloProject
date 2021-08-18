@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasteryTracker"
         mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="NoResize" Height="547" Width="878" Background="Black">
+        Title="MainWindow" ResizeMode="NoResize" Height="547" WindowStartupLocation="CenterScreen" Width="878" Background="Black">
 
     <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>
@@ -44,7 +44,7 @@
         <TextBox x:Name="tbxNum3" Text="CURRENT HRS PER WEEK" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="125,76,66,36" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="4" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
 
         <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click"/>
-        <Button Content="DISCARD" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1"/>
+        <Button Content="DISCARD" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_DiscardSkill"/>
 
         <Label x:Name="lblResult" Content="" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" Foreground="#FFFF0303" FontFamily="Consolas" FontSize="14" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 

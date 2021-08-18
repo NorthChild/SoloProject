@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MTBusiness;
 
 namespace MTBusiness
 {
@@ -37,25 +38,19 @@ namespace MTBusiness
             var totalHoursAccumulatedPastPlusCurrent = Convert.ToInt32(currentYearlyHours + pastAccumulatedHours);
 
             // reaching 10k 
-            var totalHoursToMastery = 10000;
+            var totalHoursToMastery = 10000 - pastAccumulatedHours;
             var counter = 0;
 
-            while (totalHoursToMastery >= 0)
+            while (totalHoursToMastery > 0)
             {
                 counter++;
                 totalHoursToMastery -= currentYearlyHours;
             }
-
-            // if skill already mastered
-
-            if (totalHoursAccumulatedPastPlusCurrent > 10000)
-            {
-                // make a different list to display when user has already reached 10k 
-            }
+           
 
             var currentTotal = totalHoursToMastery - totalHoursAccumulatedPastPlusCurrent;
 
-            var progressResults = new List<string>() { pastAccumulatedHours.ToString(), currentYearlyHours.ToString(), percentageLeftToMastery.ToString(), $"{counter.ToString()}"};
+            var progressResults = new List<string>() { SkillName.ToUpper(), pastAccumulatedHours.ToString(), currentYearlyHours.ToString(), $"{percentageToCompletion.ToString()}", counter.ToString() };
 
 
             return progressResults;

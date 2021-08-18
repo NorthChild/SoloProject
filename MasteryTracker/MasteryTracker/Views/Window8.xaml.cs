@@ -12,16 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace MasteryTracker
+namespace MasteryTracker.Views
 {
     /// <summary>
-    /// Interaction logic for Window7.xaml
+    /// Interaction logic for Window8.xaml
     /// </summary>
-    public partial class Window7 : Window
+    public partial class Window8 : Window
     {
-        public Window7()
+        public Window8()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click_1KILL(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_ClickSAVE(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

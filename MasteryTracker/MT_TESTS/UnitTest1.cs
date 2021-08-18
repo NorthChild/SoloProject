@@ -10,23 +10,54 @@ namespace MT_TESTS
 
         MastTrackerLogic testChecker;
 
+
         [SetUp]
         public void Setup()
         {
             testChecker = new MastTrackerLogic();
+            
         }
-                    // TO CONTINUE
+
         // 6.1 
-        [TestCase(12, 33, 44, new List<string> {"23", "21" })]
-        public void InputtingWrongDataWhileMeasuringGivesErrorMessage(int num1, int num2, int num3, List<string> expected)
+        [Test]
+        public void InputtingDataGivesCorrectResult()
         {
 
-            testChecker.PastYears = num1;
-            testChecker.PastWeeklyHrs = num2;
-            testChecker.CurrWeeklyHrs = num3;
-
-            Assert.That(() => testChecker.CalculateMasteryProgressPastYears(), expected);
+            testChecker.SkillName = "testSkill";
+            testChecker.PastYears = 1;
+            testChecker.PastWeeklyHrs = 1;
+            testChecker.CurrWeeklyHrs = 1;
+            
+            Assert.That(() =>  testChecker.CalculateMasteryProgress(), Is.EqualTo(new List<string> { "TESTSKILL", "52", "52", "0", "192"  }));
 
         }
+
+        [Test]
+        public void InputtingDataGivesCorrectResult2()
+        {
+
+            testChecker.SkillName = "testSkill2";
+            testChecker.PastYears = 10;
+            testChecker.PastWeeklyHrs = 12;
+            testChecker.CurrWeeklyHrs = 11;
+
+            Assert.That(() => testChecker.CalculateMasteryProgress(), Is.EqualTo(new List<string> { "TESTSKILL2", "6257", "574", "62", "7" }));
+
+        }
+
+        [Test]
+        public void InputtingDataThatGoesOver10kReturnDifferentRes()
+        {
+
+            testChecker.SkillName = "testSkill3";
+            testChecker.PastYears = 10;
+            testChecker.PastWeeklyHrs = 111;
+            testChecker.CurrWeeklyHrs = 111;
+
+            Assert.That(() => testChecker.CalculateMasteryProgress(), Is.EqualTo(new List<string> { "TESTSKILL3", "57879", "5788", "578", "0" }));
+
+        }
+
+
     }
 }
