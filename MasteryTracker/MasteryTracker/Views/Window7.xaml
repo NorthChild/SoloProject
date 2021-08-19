@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MasteryTracker"
         mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Height="547" Width="878" Background="Black">
+        Title="MainWindow" ResizeMode="NoResize" WindowStyle="None"  WindowStartupLocation="CenterScreen" Height="547" Width="878" Background="Black">
 
     <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>

@@ -9,12 +9,14 @@ namespace MT_TESTS
     {
 
         MastTrackerLogic testChecker;
+        UserManager _userManager;
 
 
         [SetUp]
         public void Setup()
         {
             testChecker = new MastTrackerLogic();
+            _userManager = new UserManager();
             
         }
 
@@ -57,6 +59,17 @@ namespace MT_TESTS
             Assert.That(() => testChecker.CalculateMasteryProgress(), Is.EqualTo(new List<string> { "TESTSKILL3", "57879", "5788", "578", "0" }));
 
         }
+
+
+        // 7.1
+
+        //[Test]
+        //public void SavedSkillProgressIsAddedToDb()
+        //{
+        //    _userManager.AddUser()
+
+        //    using (var db = new Skil)
+        //}
 
 
     }
