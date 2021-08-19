@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MTBusiness;
 using MasteryTracker.Views;
+using MasteryTrackedDB;
+using MasteryTracker;
 
 namespace MasteryTracker
 {
@@ -22,7 +24,7 @@ namespace MasteryTracker
     public partial class Window7 : Window
     {
 
-        //private MastTrackerLogic _mtLogic;
+        UserManager userManager = new UserManager();
 
         public Window7()
         {
@@ -34,6 +36,18 @@ namespace MasteryTracker
             Window8 window8 = new Window8();
             window8.Show();
             this.Close();
+
+            
+            string skillName = Convert.ToString(SkillNameRes.Text);
+            string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
+            string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
+            string currentProgRe = Convert.ToString(currentProgrRes.Content);
+            string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
+
+            
+            userManager.AddSKill(skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
+
+
         }
 
         private void Button_Click_1KILL(object sender, RoutedEventArgs e)

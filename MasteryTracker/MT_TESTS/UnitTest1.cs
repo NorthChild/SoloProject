@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using MTBusiness;
 using System.Collections.Generic;
+using MasteryTrackedDB;
+using System.Linq;
 
 
 namespace MT_TESTS
@@ -61,15 +63,26 @@ namespace MT_TESTS
         }
 
 
+        // 1
+
+        [Test]
+        public void SavedSkillProgressIsAddedToDb()
+        {
+            
+
+            using (var db = new SkillMasteryContext())
+            {
+                var numberOfUsersBefore = db.Users.Count();
+                _userManager.AddUser("BOB", "Bob1");
+                var numberOfUsersAfter = db.Users.Count();
+
+                Assert.That(numberOfUsersBefore + 1, Is.EqualTo(numberOfUsersAfter));
+
+            }
+        }
+
+
         // 7.1
-
-        //[Test]
-        //public void SavedSkillProgressIsAddedToDb()
-        //{
-        //    _userManager.AddUser()
-
-        //    using (var db = new Skil)
-        //}
 
 
     }
