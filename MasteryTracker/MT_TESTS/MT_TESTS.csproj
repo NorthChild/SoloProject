@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MTBusiness\MTBusiness.csproj" />
+    <ProjectReference Include="..\MasteryTrackedDB\MasteryTrackedDB.csproj" />
+    <ProjectReference Include="..\MasteryTracker\MasteryTracker.csproj" />
   </ItemGroup>
 
 </Project>

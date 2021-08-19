@@ -37,15 +37,17 @@ namespace MasteryTracker
             window8.Show();
             this.Close();
 
+
+            // add the skill info to the DB
             
-            string skillName = Convert.ToString(SkillNameRes.Text);
-            string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
-            string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
-            string currentProgRe = Convert.ToString(currentProgrRes.Content);
-            string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
+            //string skillName = Convert.ToString(SkillNameRes.Text);
+            //string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
+            //string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
+            //string currentProgRe = Convert.ToString(currentProgrRes.Content);
+            //string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
 
             
-            userManager.AddSKill(skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
+            //userManager.AddSKill(skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
 
 
         }

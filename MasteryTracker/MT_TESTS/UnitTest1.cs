@@ -64,7 +64,6 @@ namespace MT_TESTS
 
 
         // 1
-
         [Test]
         public void SavedSkillProgressIsAddedToDb()
         {

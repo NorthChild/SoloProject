@@ -1,0 +1,49 @@
+﻿<Window x:Class="MasteryTracker.Views.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MasteryTracker.Views"
+        mc:Ignorable="d"
+        Title="Window3" ResizeMode="NoResize" WindowStyle="None"  WindowStartupLocation="CenterScreen" Height="547" Width="878" Background="Black">
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
+        </Border>
+
+        <Label Content="WELCOME TO THE MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
+
+        <Label Content="LOGIN __&gt;" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="21" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="7,33,0,0" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
+
+        <TextBox x:Name="userNameLogin" Text="USER NAME" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="96,39,96,72" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="2" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="passWordLogin" Text="PASSWORD" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="93,40,98,73" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+
+        <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_1"/>
+        <Button Content="KILL" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_Click"/>
+
+
+
+
+
+
+    </Grid>
+</Window>

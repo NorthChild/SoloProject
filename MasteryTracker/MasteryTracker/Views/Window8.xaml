@@ -33,9 +33,19 @@
         <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
         </Border>
 
-        <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_ClickSAVE"/>
-        <Button Content="KILL" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_Click_1KILL"/>
+        <Button Content="KILL" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_ClickSAVE"/>
         <Label x:Name="lblResult2" Content="INVALID INPUT" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" Foreground="#FFFF0303" FontFamily="Consolas" FontSize="14" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="hidden"/>
+
+        <ListBox x:Name="ListBoxResult" Grid.Row="1" Grid.ColumnSpan="7" Margin="125,78,125,78" Grid.RowSpan="5" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1"/>
+        <Button Content="DELETE" Grid.Column="2" HorizontalAlignment="Left" Margin="123,0,0,40" Grid.Row="6" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Grid.ColumnSpan="2"/>
+        <Button Content="UPDATE" Grid.Column="3" HorizontalAlignment="Left" Margin="64,0,0,40" Grid.Row="6" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Grid.ColumnSpan="2"/>
+
+
+
+
+
+
+
 
     </Grid>
 </Window>

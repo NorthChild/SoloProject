@@ -106,8 +106,8 @@ namespace MasteryTracker
 
         private void Button_Click_DiscardSkill(object sender, RoutedEventArgs e)
         {
-            Window5 window5 = new Window5();
-            window5.Show();
+            Window4 window4 = new Window4();
+            window4.Show();
             this.Close();
         }
     }

@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MasteryTrackedDB;
+using MasteryTracker.Views;
+using MTBusiness;
 
 namespace MasteryTracker.Views
 {
@@ -22,16 +25,38 @@ namespace MasteryTracker.Views
         public Window8()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click_1KILL(object sender, RoutedEventArgs e)
-        {
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                var query =
+                    from i in db.Users
+                    select i;
+                var query2 = query.ToArray();
+
+                foreach (var i in query) 
+                {
+                    // populate list
+                }
+
+
+            }
 
         }
 
         private void Button_ClickSAVE(object sender, RoutedEventArgs e)
         {
-
+            Window4 window4 = new Window4();
+            window4.Show();
+            this.Close();
         }
+
+        
+
+
+        
+
+
     }
 }

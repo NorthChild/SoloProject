@@ -11,35 +11,38 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using MasteryTracker;
-using MasteryTrackedDB;
-
 
 namespace MasteryTracker.Views
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window4 : Window
     {
-        public Window1()
+        public Window4()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // create new user
-            Window2 window2 = new Window2();
-            window2.Show();
+            Window8 window8 = new Window8();
+            window8.Show();
+            this.Close();
+
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_ClickKill(object sender, RoutedEventArgs e)
         {
-            Window3 window3 = new Window3();
-            window3.Show();
+            Window1 window1 = new Window1();
+            window1.Show();
             this.Close();
 
         }
