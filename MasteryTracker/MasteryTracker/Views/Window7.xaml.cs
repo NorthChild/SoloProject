@@ -67,8 +67,8 @@ namespace MasteryTracker
             Window8 window8 = new Window8();
             window8.Show();
 
-            var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
-            window8.UserIDtoStore8.Content = userIDpage7;
+            //var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+            window8.UserIDtoStore8.Content = userIDToLink;
 
             this.Close();
 

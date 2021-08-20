@@ -15,12 +15,21 @@ namespace MT_TESTS
         UserManager _userManager;
 
 
+        // copy paste so u dont have to constantly write this
+
+        //using (var db = new SkillMasteryContext())
+        //    {
+
+        //    }
+
+
         [SetUp]
         public void Setup()
         {
             testChecker = new MastTrackerLogic();
             _userManager = new UserManager();
 
+            
 
             // remove test entry in DB if present
             using (var db = new SkillMasteryContext())
@@ -88,6 +97,9 @@ namespace MT_TESTS
             Assert.That(() => testChecker.CalculateMasteryProgress(), Is.EqualTo(new List<string> { "TESTSKILL3", "57879", "5788", "578", "0" }));
 
         }
+
+
+        // test new skill created in db
 
 
         // 1
@@ -172,6 +184,46 @@ namespace MT_TESTS
             }
 
         }
+
+
+
+        // 7.2
+        [Test]
+        public void TestingThatWhenUserSavesSkillReportDBSavesTheData()
+        {
+
+            using (var db = new SkillMasteryContext())
+            {
+                _userManager.AddSKill(64, "TESTSKILL", "12", "12", "12", "12");
+
+                var query =
+                    db.SkillToMasters.Where(x => x.SkillName == "TESTSKILL").Count();
+
+                Assert.That(query, Is.EqualTo(1));
+            }
+
+        }
+
+
+        [Test]
+        public void TestingThatWhenUserSavesSkillReportDBHasOneMoreItem()
+        {
+
+            using (var db = new SkillMasteryContext())
+            {
+                var query =
+                    db.SkillToMasters.Count();
+
+                _userManager.AddSKill(64, "TESTSKILL", "12", "12", "12", "12");
+
+                var query2 =
+                    db.SkillToMasters.Count();
+
+                Assert.That(query2, Is.EqualTo(query + 1));
+            }
+
+        }
+
 
 
 

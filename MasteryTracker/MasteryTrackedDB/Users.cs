@@ -25,7 +25,12 @@ namespace MasteryTrackedDB
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        public List<SkillToMaster> SkillToMaster { get; set; }
+
+        //public virtual SkillToMaster SkillToMast { get; set; }
+        public virtual List<SkillToMaster> SkillToMaster { get; set; }
+
+        // parent has virtual list child has virtual prop
+
 
     }
 }

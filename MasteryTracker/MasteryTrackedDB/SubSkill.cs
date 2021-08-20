@@ -11,17 +11,21 @@ namespace MasteryTrackedDB
 
         public SubSkill()
         {
-
+            
         }
 
 
         public int SubSkillID { get; set; }
-        public int SkillID { get; set; }
+        public int SkillToMasterId { get; set; }
 
 
-        public string SubSkillList { get; set; }
+        public virtual SkillToMaster SkillToMaster { get; set; }
 
-        public List<SkillToMaster> skillToMasters { get; set; }
-        
+        //public List<SubSkill> SubSkillList { get; set; }
+
+        //public virtual SkillToMaster SkillToMast { get; set; }
+
+        //public List<SkillToMaster> SkillToMaster { get; set; }
+
     }
 }

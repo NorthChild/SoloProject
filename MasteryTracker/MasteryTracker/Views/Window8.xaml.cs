@@ -49,6 +49,10 @@ namespace MasteryTracker.Views
         {
             Window4 window4 = new Window4();
             window4.Show();
+
+            var userIDpage8 = Convert.ToString(UserIDtoStore8.Content);
+            window4.UserIDtoStore4.Content = userIDpage8;
+
             this.Close();
         }
 

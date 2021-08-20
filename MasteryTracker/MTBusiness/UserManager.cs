@@ -32,8 +32,11 @@ namespace MTBusiness
 
         public void AddSKill(int userId, string skillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
         {
+
             using (var db = new SkillMasteryContext())
             {
+
+                // if null exception ?
 
                 var newSkill = new SkillToMaster() { UsersID = userId, SkillName = skillName, TotSkillHrs = totSkillHrs, CurrYrHrs = currYrHrs, PercToMast = percToMast, EstYrsToMast = estYrsToMast };
 
@@ -43,6 +46,10 @@ namespace MTBusiness
 
         }
 
+
+        // update skill
+
+        // delete skill 
        
     }
 }
