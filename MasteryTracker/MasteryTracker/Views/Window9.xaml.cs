@@ -22,12 +22,14 @@ namespace MasteryTracker.Views
         public Window9()
         {
             InitializeComponent();
+
+            var userNameID = UserIDtoStore9.Content;
         }
 
         private void Button_ClickExitSubSkill(object sender, RoutedEventArgs e)
         {
-            Window7 window7 = new Window7();
-            window7.Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
 
@@ -39,6 +41,11 @@ namespace MasteryTracker.Views
         private void Button_Click_2AddSubClass(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

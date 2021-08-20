@@ -32,6 +32,9 @@
         <Label Content="What Skill would you like to Master? " Margin="45,50,18,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF4BF718" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" FontFamily="Consolas" Height="26"/>
         <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
         </Border>
+
+        <Button x:Name="exitAppBtn" Content="X" Grid.Column="6" HorizontalAlignment="Left" Margin="31,39,0,0" VerticalAlignment="Top" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Height="40" Width="40" Grid.RowSpan="2" Click="exitAppBtn_Click"/>
+
         <TextBlock HorizontalAlignment="Left"  Margin="63,50,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="188" Height="26" Grid.RowSpan="2" FontFamily="Consolas" Foreground="#FF4AE81C" FontSize="16" FontWeight="Bold" Language="en-gb" Text="Skill Name _>"></TextBlock>
         <TextBox x:Name="SkillNameRes" Text="SKILL NAME" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="63,0,3,33" BorderBrush="#FF4BF718" Grid.ColumnSpan="2" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold"/>
 
@@ -49,6 +52,9 @@
         <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_ClickSAVE"/>
         <Button Content="KILL" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_Click_1KILL"/>
         <Label x:Name="lblResult2" Content="INVALID INPUT" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" Foreground="#FFFF0303" FontFamily="Consolas" FontSize="14" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="hidden"/>
+        <Label x:Name="UserIDtoStore7" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden"/>
+
+
 
 
 

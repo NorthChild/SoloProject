@@ -40,8 +40,15 @@ namespace MasteryTracker.Views
         {
             Window3 window3 = new Window3();
             window3.Show();
+            var userIDpage1 = Convert.ToString(UserIDtoStore1.Content);
+            window3.UserIDtoStore3.Content = userIDpage1;
             this.Close();
 
+        }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

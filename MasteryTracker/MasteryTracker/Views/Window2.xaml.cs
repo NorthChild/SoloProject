@@ -56,8 +56,6 @@ namespace MasteryTracker.Views
             // checking if username is taken or not
             using (var db = new SkillMasteryContext())
             {
-                //var query =
-                //    db.Users.Select(c => c.UserName == username).Count();
 
                 var query =
                     from i in db.Users
@@ -80,27 +78,6 @@ namespace MasteryTracker.Views
                 passSuccess = true;
             }
 
-
-
-            // if password and user are correct then save user to db move to next window
-            //if (success == true && passSuccess == true)
-            //{
-
-            //    //userManager.AddUser(username, password);
-
-            //    using (var db = new SkillMasteryContext())
-            //    {
-
-            //        userManager.AddUser(username, password);
-            //        db.SaveChanges();
-            //    }
-
-
-            //    Window1 window1 = new Window1();
-            //    window1.Show();
-            //    this.Close();
-
-            //}
             if (success == false && passSuccess == true)
             {
                 lblResult.Content = "USERNAME TAKEN";
@@ -122,16 +99,23 @@ namespace MasteryTracker.Views
                     db.SaveChanges();
                 }
 
+                
 
                 Window1 window1 = new Window1();
                 window1.Show();
+                var userIDpage2 = Convert.ToString(username);
+                window1.UserIDtoStore1.Content = userIDpage2;
                 this.Close();
-
 
 
 
             }
 
+        }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

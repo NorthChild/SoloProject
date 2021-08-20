@@ -70,6 +70,10 @@ namespace MasteryTracker
                     // create and open new window and feed results to UI
                     Window7 window7 = new Window7();
                     window7.Show();
+
+                    var userIDMainpage = Convert.ToString(UserIDtoStoreMain.Content);
+                    window7.UserIDtoStore7.Content = userIDMainpage;
+
                     // display progress data 
                     window7.SkillNameRes.Text = arrayRes[0];
 
@@ -85,6 +89,10 @@ namespace MasteryTracker
                     //create and open new window and feed results to UI
                     Window7 window7 = new Window7();
                     window7.Show();
+
+                    var userIDMainpage = Convert.ToString(UserIDtoStoreMain.Content);
+                    window7.UserIDtoStore7.Content = userIDMainpage;
+
                     // display progress data 
                     window7.SkillNameRes.Text = arrayRes[0];
                     window7.totHrsSoFarResult.Content = arrayRes[1];
@@ -110,6 +118,14 @@ namespace MasteryTracker
             window4.Show();
             this.Close();
         }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
+
     }
 
 

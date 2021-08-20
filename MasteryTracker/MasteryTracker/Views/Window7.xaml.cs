@@ -33,22 +33,44 @@ namespace MasteryTracker
 
         private void Button_ClickSAVE(object sender, RoutedEventArgs e)
         {
-            Window8 window8 = new Window8();
-            window8.Show();
-            this.Close();
 
+            var userIDToLink = UserIDtoStore7.Content;
 
             // add the skill info to the DB
-            
-            //string skillName = Convert.ToString(SkillNameRes.Text);
-            //string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
-            //string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
-            //string currentProgRe = Convert.ToString(currentProgrRes.Content);
-            //string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
+            string skillName = Convert.ToString(SkillNameRes.Text);
+            string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
+            string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
+            string currentProgRe = Convert.ToString(currentProgrRes.Content);
+            string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
 
-            
-            //userManager.AddSKill(skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
+            using (var db = new SkillMasteryContext())
+            {
 
+                // find obj associated with userID
+                var userIdQuery =
+                from i in db.Users
+                where i.UserName == userIDToLink
+                select i.UsersID;
+
+                int userIDFinal = 0;
+
+                foreach (var i in userIdQuery)
+                {
+                    userIDFinal += i;
+                }
+
+                userManager.AddSKill(userIDFinal, skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
+                db.SaveChanges();
+
+            }
+
+            Window8 window8 = new Window8();
+            window8.Show();
+
+            var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+            window8.UserIDtoStore8.Content = userIDpage7;
+
+            this.Close();
 
         }
 
@@ -63,6 +85,15 @@ namespace MasteryTracker
         {
             Window9 window9 = new Window9();
             window9.Show();
+
+            var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+            window9.UserIDtoStore9.Content = userIDpage7;
+
+            this.Close();
+        }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

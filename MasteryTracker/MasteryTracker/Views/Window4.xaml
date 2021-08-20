@@ -30,6 +30,8 @@
         <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
         </Border>
 
+        <Button x:Name="exitAppBtn" Content="X" Grid.Column="6" HorizontalAlignment="Left" Margin="31,39,0,0" VerticalAlignment="Top" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Height="40" Width="40" Grid.RowSpan="2" Click="exitAppBtn_Click"/>
+
         <Label Content="WELCOME TO THE MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
 
         <Label Content="LOGIN __&gt;" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="21" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="7,33,0,0" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
@@ -38,6 +40,8 @@
         <Button Content="CREATE NEW" Grid.Column="4" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Height="77" Width="125" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_1" Margin="0,78,0,0" Grid.RowSpan="2"/>
 
         <Button Content="KILL" Grid.Column="3" HorizontalAlignment="Left" Margin="29,39,0,0" Grid.Row="4" VerticalAlignment="Top" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_ClickKill"/>
+
+        <Label x:Name="UserIDtoStore4" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden"/>
 
     </Grid>
 </Window>

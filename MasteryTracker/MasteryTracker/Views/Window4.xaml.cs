@@ -35,6 +35,10 @@ namespace MasteryTracker.Views
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+
+            var userIDpage4 = Convert.ToString(UserIDtoStore4.Content);
+            mainWindow.UserIDtoStoreMain.Content = userIDpage4;
+
             this.Close();
 
         }
@@ -45,6 +49,11 @@ namespace MasteryTracker.Views
             window1.Show();
             this.Close();
 
+        }
+
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

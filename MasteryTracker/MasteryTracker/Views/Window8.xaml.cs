@@ -30,15 +30,15 @@ namespace MasteryTracker.Views
             using (var db = new SkillMasteryContext())
             {
 
-                var query =
-                    from i in db.Users
-                    select i;
-                var query2 = query.ToArray();
+                //var query =
+                //    from i in db.Users
+                //    select i;
+                //var query2 = query.ToArray();
 
-                foreach (var i in query) 
-                {
-                    // populate list
-                }
+                //foreach (var i in query) 
+                //{
+                //    // populate list
+                //}
 
 
             }
@@ -52,11 +52,9 @@ namespace MasteryTracker.Views
             this.Close();
         }
 
-        
-
-
-        
-
-
+        private void exitAppBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

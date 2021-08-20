@@ -17,18 +17,25 @@ namespace MTBusiness
 
             using (var db = new SkillMasteryContext())
             {
+
+                // if user already present throw exception
+                if (db.Users.Contains(newUser))
+                {
+                    throw new ArgumentException("USER ALREADY PRESENT");
+                }
+
                 db.Users.Add(newUser);
                 db.SaveChanges();
             }
         }
 
 
-        public void AddSKill(string skillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
+        public void AddSKill(int userId, string skillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
         {
             using (var db = new SkillMasteryContext())
             {
 
-                var newSkill = new SkillToMaster() { SkillName = skillName, TotSkillHrs = totSkillHrs, CurrYrHrs = currYrHrs, PercToMast = percToMast, EstYrsToMast = estYrsToMast };
+                var newSkill = new SkillToMaster() { UsersID = userId, SkillName = skillName, TotSkillHrs = totSkillHrs, CurrYrHrs = currYrHrs, PercToMast = percToMast, EstYrsToMast = estYrsToMast };
 
                 db.SkillToMasters.Add(newSkill);
                 db.SaveChanges();
@@ -36,5 +43,6 @@ namespace MTBusiness
 
         }
 
+       
     }
 }
