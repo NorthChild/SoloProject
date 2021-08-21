@@ -33,8 +33,10 @@ namespace MasteryTracker
 
         private void Button_ClickSAVE(object sender, RoutedEventArgs e)
         {
-
+            
             var userIDToLink = UserIDtoStore7.Content;
+            int userIDFinal = 0;
+
 
             // add the skill info to the DB
             string skillName = Convert.ToString(SkillNameRes.Text);
@@ -52,7 +54,7 @@ namespace MasteryTracker
                 where i.UserName == userIDToLink
                 select i.UsersID;
 
-                int userIDFinal = 0;
+                //int userIDFinal = 0;
 
                 foreach (var i in userIdQuery)
                 {
@@ -67,10 +69,12 @@ namespace MasteryTracker
             Window8 window8 = new Window8();
             window8.Show();
 
-            //var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
             window8.UserIDtoStore8.Content = userIDToLink;
-
             this.Close();
+            //var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+
+
+
 
         }
 
@@ -87,7 +91,10 @@ namespace MasteryTracker
             window9.Show();
 
             var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+            var percetangeToAttribute = Convert.ToString(currentProgrRes.Content);
+
             window9.UserIDtoStore9.Content = userIDpage7;
+            window9.totalPercentageCalculated.Text = percetangeToAttribute; 
 
             this.Close();
         }

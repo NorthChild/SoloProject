@@ -225,8 +225,75 @@ namespace MT_TESTS
         }
 
 
+        // 8.2
+        [Test]
+        public void TestThatSkillsAreViewedFromDB()
+        {
+            
+            using (var db = new SkillMasteryContext())
+            {
+
+                _userManager.RetreiveUserSkills("USERNAME");
+                var queryBefore = db.SkillToMasters.Where(c => c.UsersID == 64).Count();
+
+                Assert.That(queryBefore, Is.EqualTo(29));
+
+            }
 
 
+        }
+
+
+        // delete 
+        [Test]
+        public void TestThatWhenUserChoosesToDeleteSkillItIsRemovedFromDB()
+        {
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                _userManager.AddSKill(88, "test123", "23", "23", "23", "23");
+
+                var queryCountOfSkillsWithUSerId = db.SkillToMasters.Where(c => c.UsersID == 88).Count();
+
+                var querySkillId = db.SkillToMasters.Where(c => c.UsersID == 88).Where(w => w.SkillName == "test123").Select(c => c.SkillToMasterId);
+
+                int skillIdToLink = 0;
+
+                foreach (var i in querySkillId)
+                {
+                    skillIdToLink += i;
+                }
+
+                _userManager.DeleteSkill(skillIdToLink);
+
+                var queryCountOfSkillsWithUSerId2 = db.SkillToMasters.Where(c => c.UsersID == 88).Count();
+
+                Assert.That(queryCountOfSkillsWithUSerId == queryCountOfSkillsWithUSerId2);
+            }
+        }
+
+
+        // update
+        [Test]
+        public void TestThatWhenUserUpdatesSkillsItIsUpdatedInTheDB()
+        {
+            using (var db = new SkillMasteryContext())
+            {
+
+                _userManager.AddSKill(88, "testTestington", "23", "23", "23", "23");
+
+                var queryCountOfSkillsWithUSerId = db.SkillToMasters.Where(c => c.SkillName == "testTestington").Count();
+
+                _userManager.UpdateSkill(88, "testTestington", "Badmin", "23", "23", "23", "23");
+
+                var queryCountOfSkillsWithUSerId2 = db.SkillToMasters.Where(c => c.SkillName == "testTestington").Count();
+
+                Assert.That(queryCountOfSkillsWithUSerId2 < queryCountOfSkillsWithUSerId);
+            }
+        }
+
+        // 8.3 
 
         [TearDown]
         public void TearDown()

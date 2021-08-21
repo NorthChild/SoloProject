@@ -27,7 +27,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="WELCOME TO THE MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
+        <Label Content="WELCOME TO THE SKILL MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
         <Label Content="What Skill would you like to Master? " Margin="45,50,18,0" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF4BF718" Grid.RowSpan="2" Grid.ColumnSpan="4" FontSize="16" FontWeight="Bold" FontFamily="Consolas" Height="26"/>
         <Border BorderThickness="1" BorderBrush="#FF4AE81C" HorizontalAlignment="Left" Width="833" Margin="20,20,0,20" Grid.RowSpan="7" Grid.ColumnSpan="7">
         </Border>

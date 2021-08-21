@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MasteryTrackedDB;
+using MTBusiness;
 
 namespace MTBusiness
 {
@@ -34,6 +35,7 @@ namespace MTBusiness
             using (var db = new SkillMasteryContext())
             {
 
+
                 // find obj associated with userID
                 var userIdQuery =
                 from i in db.Users
@@ -47,9 +49,24 @@ namespace MTBusiness
                     userIDFinal += i;
                 }
 
-                return db.SkillToMasters.ToList();
+                //
+                var userSkillsQuery =
+                from i in db.SkillToMasters
+                where i.UsersID == userIDFinal
+                select i;
 
+                //var userSkillsQuery =
 
+                if (userId is null || userId == " " || userId == "")
+                {
+                    return db.SkillToMasters.ToList();
+                }
+                else
+                {
+                    return db.SkillToMasters.Where(c => c.UsersID == userIDFinal).ToList();
+                }
+
+                
             }
         }
 
@@ -59,8 +76,6 @@ namespace MTBusiness
 
             using (var db = new SkillMasteryContext())
             {
-
-                // if null exception ?
 
                 var newSkill = new SkillToMaster() { UsersID = userId, SkillName = skillName, TotSkillHrs = totSkillHrs, CurrYrHrs = currYrHrs, PercToMast = percToMast, EstYrsToMast = estYrsToMast };
 
@@ -72,8 +87,53 @@ namespace MTBusiness
 
 
         // update skill
+        public bool UpdateSkill(int userId, string skillName, string newSkillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
+        {
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                var selectedUser = db.SkillToMasters.Where(s => s.UsersID == userId).Where(w => w.SkillName == skillName).FirstOrDefault();
+
+                selectedUser.SkillName = newSkillName;
+                selectedUser.TotSkillHrs = totSkillHrs;
+                selectedUser.CurrYrHrs = currYrHrs;
+                selectedUser.PercToMast = percToMast;
+                selectedUser.EstYrsToMast = estYrsToMast;
+
+                if (selectedUser == null)
+                {
+                    return false;
+                }
+
+                //db.SkillToMasters.Add(newSkill);
+                db.SaveChanges();
+            }
+            return true;
+        }
 
         // delete skill 
-       
+
+        public bool DeleteSkill(int skillId)
+        {
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                var selectedSkill = db.SkillToMasters.Where(s => s.SkillToMasterId == skillId);
+
+                if (selectedSkill == null)
+                {
+                    return false;
+                }
+
+
+                db.SkillToMasters.RemoveRange(selectedSkill);
+                db.SaveChanges();
+
+            }
+            return true;
+        }
+
     }
 }

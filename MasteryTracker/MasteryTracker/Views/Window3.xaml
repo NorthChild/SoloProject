@@ -32,19 +32,24 @@
 
         <Button x:Name="exitAppBtn" Content="X" Grid.Column="6" HorizontalAlignment="Left" Margin="31,39,0,0" VerticalAlignment="Top" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Height="40" Width="40" Grid.RowSpan="2" Click="exitAppBtn_Click"/>
 
-        <Label Content="WELCOME TO THE MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
+        <Label Content="WELCOME TO THE SKILL MASTERY TRACKER __&gt;" Grid.Column="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="22" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="10,38,0,0" Grid.RowSpan="2" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal"/>
 
         <Label x:Name="lblResult" Content="" Grid.Column="2" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="376" Foreground="#FFFF0303" FontFamily="Consolas" FontSize="14" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 
         <Label Content="LOGIN __&gt;" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" VerticalAlignment="Top" Height="45" FontFamily="Consolas" FontSize="21" Foreground="#FF4BF718" HorizontalAlignment="Left" Width="608" Margin="7,42,0,0" Grid.ColumnSpan="5" FontWeight="Bold" FontStyle="Normal" Grid.RowSpan="2"/>
 
-        <TextBox x:Name="userNameLogin" Text="USER NAME" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="96,39,96,72" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="2" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
-        <TextBox x:Name="passWordLogin" Text="PASSWORD" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="93,40,98,73" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="userNameLogin" Text="USER NAME" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="96,39,96,72" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="2" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2" Height="45" Width="180"/>
+        <TextBox x:Name="passWordLog" Text="PASSWORD" TextWrapping="Wrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="93,40,98,73" BorderBrush="#FF4BF718" Grid.ColumnSpan="3" Grid.Row="3" Background="#FF291515" FontFamily="Consolas" FontSize="14" Foreground="#FF4BF718" FontWeight="Bold" Grid.Column="2" Grid.RowSpan="2" Width="180" Height="45" Visibility="Hidden"/>
+        <PasswordBox x:Name="passWordLogin" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" BorderBrush="#FF4BF718" Background="#FF291515" Margin="95,40,0,0" Grid.Row="3" VerticalAlignment="Top" Height="45" Width="180" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
 
         <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_1"/>
         <Button Content="KILL" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_Click"/>
 
         <Label x:Name="UserIDtoStore3" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden"/>
+
+
+
 
 
 

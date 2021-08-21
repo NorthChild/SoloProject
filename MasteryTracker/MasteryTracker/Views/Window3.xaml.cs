@@ -45,7 +45,7 @@ namespace MasteryTracker.Views
             {
 
                 var userNameLogDet = userNameLogin.Text;
-                var passLogin = passWordLogin.Text;
+                var passLogin = passWordLogin.Password;
 
                 var queryUserNameAndPass =
                     from i in db.Users

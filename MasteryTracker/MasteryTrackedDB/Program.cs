@@ -1,4 +1,7 @@
 ﻿using System;
+using MasteryTrackedDB;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace MasteryTrackedDB
@@ -24,17 +27,39 @@ namespace MasteryTrackedDB
             using (var db = new SkillMasteryContext())
             {
 
-                Users user = new Users() { UserName = "bob" };
+                //Users user = new Users() { UserName = "bob" };
 
-                db.Users.Add(user);
+                //db.Users.Add(user);
 
+                //db.SaveChanges();
 
+                //Console.WriteLine("DONE");
 
-                db.SaveChanges();
+                var userId = "1";
 
-                Console.WriteLine("DONE");
+                var userIdQuery =
+                from i in db.Users
+                where i.UserName == userId
+                select i.UsersID;
+
+                int userIDFinal = 0;
+
+                foreach (var i in userIdQuery)
+                {
+                    userIDFinal += i;
+                }
+
+                var userSkillsQuery =
+                from i in db.SkillToMasters
+                where i.UsersID == userIDFinal
+                select i;
+
+                foreach (var i in userSkillsQuery) Console.WriteLine(i);
 
             }
+
+
+
 
         }
     }

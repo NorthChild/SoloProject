@@ -27,6 +27,10 @@ namespace MasteryTracker.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window8 window8 = new Window8();
+
+            var userIDpage4 = Convert.ToString(UserIDtoStore4.Content);
+            window8.UserIDtoStore8.Content = userIDpage4;
+
             window8.Show();
             this.Close();
 

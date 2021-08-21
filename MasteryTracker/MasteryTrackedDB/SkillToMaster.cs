@@ -9,7 +9,6 @@ namespace MasteryTrackedDB
     public class SkillToMaster
     {
 
-
         public SkillToMaster()
         {
             
@@ -17,13 +16,20 @@ namespace MasteryTrackedDB
 
         public override string ToString()
         {
-            return $"Skill: {SkillName} - Total: {TotSkillHrs} Hrs - Current yearly: {CurrYrHrs} Hrs - Track to 10k: {PercToMast}% - Estimate to 10k: {EstYrsToMast} Yrs";
+
+            if (PercToMast == "MASTERED" || EstYrsToMast == "COMPLETED")
+            {
+                return $"Skill: {SkillName} - Total: {TotSkillHrs} Hrs - Current yearly: {CurrYrHrs} Hrs - MASTERY REACHED";
+            }
+            else
+            {
+                return $"Skill: {SkillName} - Total: {TotSkillHrs} Hrs - Current yearly: {CurrYrHrs} Hrs - Track to 10k: {PercToMast} - Estimate to 10k: {EstYrsToMast} Yrs";
+            }
         }
 
 
         public int SkillToMasterId { get; set; }
         public int UsersID { get; set; }
-
         
         public int SubSkillID { get; set; }
 
