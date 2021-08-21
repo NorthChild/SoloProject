@@ -49,11 +49,6 @@ namespace MTBusiness
 
                 return db.SkillToMasters.ToList();
 
-                //return from i in db.SkillToMasters.Where(c => c.UsersID == userIDFinal).Select(skillList => new { Skill = skillList.SkillName, Total_Hours = skillList.TotSkillHrs, Current_Yearly_Hours = skillList.CurrYrHrs, Percentage = skillList.PercToMast, Years_To_Mastery = skillList.EstYrsToMast }).OrderByDescending(c => c.Current_Yearly_Hours).GroupBy(c => c.Current_Yearly_Hours);
-
-
-
-
 
             }
         }

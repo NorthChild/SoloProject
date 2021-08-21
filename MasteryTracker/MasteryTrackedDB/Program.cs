@@ -10,6 +10,10 @@ namespace MasteryTrackedDB
             Console.WriteLine("Hello World!");
 
 
+            SkillToMaster newSkill = new SkillToMaster() { UsersID = 12, SkillName = "blah", TotSkillHrs = "34", CurrYrHrs = "23", PercToMast = "23", EstYrsToMast = "34" };
+
+            Console.WriteLine(newSkill.ToString());
+            
 
             // USER
             // - many to many -

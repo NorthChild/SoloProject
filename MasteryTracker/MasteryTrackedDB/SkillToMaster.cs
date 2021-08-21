@@ -12,10 +12,13 @@ namespace MasteryTrackedDB
 
         public SkillToMaster()
         {
-            // potential solve: put subskill new hashset like in EF_modelFirst
+            
         }
 
-        // create constructor that does not take subskill in consideration
+        public override string ToString()
+        {
+            return $"Skill: {SkillName} - Total: {TotSkillHrs} Hrs - Current yearly: {CurrYrHrs} Hrs - Track to 10k: {PercToMast}% - Estimate to 10k: {EstYrsToMast} Yrs";
+        }
 
 
         public int SkillToMasterId { get; set; }
