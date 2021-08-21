@@ -29,6 +29,35 @@ namespace MTBusiness
             }
         }
 
+        public List<SkillToMaster> RetreiveUserSkills(string userId)
+        {
+            using (var db = new SkillMasteryContext())
+            {
+
+                // find obj associated with userID
+                var userIdQuery =
+                from i in db.Users
+                where i.UserName == userId
+                select i.UsersID;
+
+                int userIDFinal = 0;
+
+                foreach (var i in userIdQuery)
+                {
+                    userIDFinal += i;
+                }
+
+                return db.SkillToMasters.ToList();
+
+                //return from i in db.SkillToMasters.Where(c => c.UsersID == userIDFinal).Select(skillList => new { Skill = skillList.SkillName, Total_Hours = skillList.TotSkillHrs, Current_Yearly_Hours = skillList.CurrYrHrs, Percentage = skillList.PercToMast, Years_To_Mastery = skillList.EstYrsToMast }).OrderByDescending(c => c.Current_Yearly_Hours).GroupBy(c => c.Current_Yearly_Hours);
+
+
+
+
+
+            }
+        }
+
 
         public void AddSKill(int userId, string skillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
         {

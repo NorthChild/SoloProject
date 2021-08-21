@@ -22,27 +22,20 @@ namespace MasteryTracker.Views
     /// </summary>
     public partial class Window8 : Window
     {
+        private UserManager _userManager = new UserManager();
+
         public Window8()
         {
             InitializeComponent();
+            PopulateSkillListBox();
+            
 
+        }
 
-            using (var db = new SkillMasteryContext())
-            {
-
-                //var query =
-                //    from i in db.Users
-                //    select i;
-                //var query2 = query.ToArray();
-
-                //foreach (var i in query) 
-                //{
-                //    // populate list
-                //}
-
-
-            }
-
+        private void PopulateSkillListBox()
+        {
+            var userID = Convert.ToString(UserIDtoStore8.Content);
+            ListBoxResult.ItemsSource = _userManager.RetreiveUserSkills(userID);
         }
 
         private void Button_ClickSAVE(object sender, RoutedEventArgs e)
@@ -59,6 +52,17 @@ namespace MasteryTracker.Views
         private void exitAppBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void ListBoxResult_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+
+            // to do ??
+
+            
+
+
         }
     }
 }
