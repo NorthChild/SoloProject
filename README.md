@@ -35,7 +35,7 @@ SOLO PROJECT
 
     ​			Having some delays in linking the UI to the app logic, as a contingency, i switched to another task among the prioritised ones, this gave me the ability to continue with the requirements without dwelling on a roadblock, until either i manage to get insight from a team member, or return with a fresher mindset ready to solve the issue.
 
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 1.png)
+https://github.com/NorthChild/SoloProject/blob/f8ea5f7ebedba471a417833832b492c58fb9c424/Project%20Boards/KabanBoard_DaybyDay/Day%201.png
 
 - DAY 2
 
@@ -54,8 +54,7 @@ SOLO PROJECT
   - RETROSPECTIVES:
 
     ​			Managed to deliver MVP to its base requirements, have been added functionality to the app by Product Owner, it will require an additional window, DB adaptation as well as extension from the original app logic
-
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 2.png)
+https://github.com/NorthChild/SoloProject/blob/d54c6895537b361a8f027dec86abb48afb2ef4e3/Project%20Boards/KabanBoard_DaybyDay/Day%202.png
 
 - DAY 3
 
@@ -75,7 +74,7 @@ SOLO PROJECT
 
     ​			Managed to complete a good portion of the remaining tasks as well as completing some User stories and Tests on the DB, finding moving between tasks when confronted by a roadblock very useful.
 
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 3.png)
+https://github.com/NorthChild/SoloProject/blob/d54c6895537b361a8f027dec86abb48afb2ef4e3/Project%20Boards/KabanBoard_DaybyDay/Day%203.png
 
 - DAY 4
 
@@ -95,7 +94,7 @@ SOLO PROJECT
 
     ​			The roadblock that manifested today gave me an opportunity to realise how many things i would do differently were i to start this project anew, contingencies like changing to another task when blocked, as helped push the project forward even when i was blocked on another aspect, coming back to it after clearing tasks and having a fresh approach helped with resolving the issue and move forward
 
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 4.png)
+https://github.com/NorthChild/SoloProject/blob/d54c6895537b361a8f027dec86abb48afb2ef4e3/Project%20Boards/KabanBoard_DaybyDay/Day%204.png
 
 
 
@@ -117,7 +116,7 @@ SOLO PROJECT
 
     ​			Another road-block that showed me what i would have changed were i to start again with the project, i've learned many new tricks into being more efficient while building up a task by task
 
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 5.png)
+https://github.com/NorthChild/SoloProject/blob/d54c6895537b361a8f027dec86abb48afb2ef4e3/Project%20Boards/KabanBoard_DaybyDay/Day%205.png
 
 
 
@@ -139,4 +138,4 @@ SOLO PROJECT
 
     ​			After the project end i have learned a lot on how to structure the project and how to proceed, i made some decisions at the start of the project that dictated my progress, and if i were to go back i would approach the whole process in a very different manner
 
-![](C:\Users\Princ\source\SDETCourseMaterial\SDET_CourseMaterial\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 6.png)
+https://github.com/NorthChild/SoloProject/blob/d54c6895537b361a8f027dec86abb48afb2ef4e3/Project%20Boards/KabanBoard_DaybyDay/Day%206.png
