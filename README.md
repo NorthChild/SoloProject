@@ -18,7 +18,7 @@ SOLO PROJECT
 
     ​			
 
- Project Boards/KabanBoard_DaybyDay/Day 1.png
+ https://github.com/NorthChild/SoloProject/blob/f8ea5f7ebedba471a417833832b492c58fb9c424/Project%20Boards/KabanBoard_DaybyDay/Day%201.png
   
 
 - DAY 1 
