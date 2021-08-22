@@ -71,7 +71,6 @@ namespace MasteryTracker
 
             window8.UserIDtoStore8.Content = userIDToLink;
             this.Close();
-            //var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
 
 
 

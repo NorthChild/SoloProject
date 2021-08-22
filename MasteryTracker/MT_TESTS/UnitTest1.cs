@@ -239,8 +239,6 @@ namespace MT_TESTS
                 Assert.That(queryBefore, Is.EqualTo(29));
 
             }
-
-
         }
 
 

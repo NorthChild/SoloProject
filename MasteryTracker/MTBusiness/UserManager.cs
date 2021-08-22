@@ -59,11 +59,11 @@ namespace MTBusiness
 
                 if (userId is null || userId == " " || userId == "")
                 {
-                    return db.SkillToMasters.ToList();
+                    return db.SkillToMasters.OrderBy(c => c.SkillName).ToList();
                 }
                 else
                 {
-                    return db.SkillToMasters.Where(c => c.UsersID == userIDFinal).ToList();
+                    return db.SkillToMasters.Where(c => c.UsersID == userIDFinal).OrderBy(c => c.SkillName).ToList();
                 }
 
                 

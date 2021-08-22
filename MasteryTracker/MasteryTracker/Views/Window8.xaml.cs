@@ -60,30 +60,48 @@ namespace MasteryTracker.Views
         private void ListBoxResult_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            // to do ??
-
         }
 
         private void ShowMySkillsButton_Click(object sender, RoutedEventArgs e)
         {
             delBtn.Visibility = Visibility.Visible;
-            updBtn.Visibility = Visibility.Visible;
+            //updBtn.Visibility = Visibility.Visible;
 
             var userId = Convert.ToString(UserIDtoStore8.Content);
             ListBoxResult.ItemsSource = _userManager.RetreiveUserSkills(userId);
-
-
         }
 
         private void updBtn_Click(object sender, RoutedEventArgs e)
         {
 
+            var userId = Convert.ToInt32(UserIDtoStore8.Content);
+            var itemToUpd = Convert.ToString(ListBoxResult.SelectedItem);
 
-            var itemToUpd = ListBoxResult.SelectedItem;            
+            var objtoUpdate = ((SkillToMaster)ListBoxResult.SelectedItem);
+
+
+            // take skill id and user id send it to update page (reflection of mainWindow)
+            // on main page recalculate progress
+            // call skillupdate method on update page
+            // no option for kill, in this page u can only proceed by updating the skill
             
-            // select item from box and extract parameters necessary for update method in user manager
 
-            //_userManager.DeleteSkill()
+
+        }
+
+        private void delBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            var userId = Convert.ToInt32(UserIDtoStore8.Content);
+            //var itemToUpd = Convert.ToString(ListBoxResult.SelectedItem);
+
+            var objtoUpdate = ((SkillToMaster)ListBoxResult.SelectedItem);
+            _userManager.DeleteSkill(objtoUpdate.SkillToMasterId);
+
+            PopulateSkillListBox();
+            delBtn.Visibility = Visibility.Visible;
+            //updBtn.Visibility = Visibility.Visible;
+
 
         }
     }
