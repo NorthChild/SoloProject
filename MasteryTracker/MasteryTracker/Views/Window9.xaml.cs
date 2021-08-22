@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MasteryTrackedDB;
+using MasteryTracker;
+using MTBusiness;
 
 namespace MasteryTracker.Views
 {
@@ -19,6 +22,9 @@ namespace MasteryTracker.Views
     /// </summary>
     public partial class Window9 : Window
     {
+
+        UserManager _userManager = new UserManager();
+
         public Window9()
         {
             InitializeComponent();
@@ -28,14 +34,104 @@ namespace MasteryTracker.Views
 
         private void Button_ClickExitSubSkill(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Window8 window8 = new Window8();
+            var userIDpage9 = Convert.ToString(UserIDtoStore9.Content);
+            window8.UserIDtoStore8.Content = userIDpage9;
+            window8.Show();
             this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_1SAVESub(object sender, RoutedEventArgs e)
         {
 
+            var skillName = Convert.ToString(SkillIDtoStore9.Content);
+            var percToMast = Convert.ToString(lblResult.Content);
+
+            List<string> subskillList = new List<string>();
+
+            if (subSkillSpawn1.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+
+                subskillList.Add(subskill1);
+            }
+            else if (subSkillSpawn1.Visibility == Visibility.Visible && subSkillSpawn2.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+                var subskill2 = $"{subSkillSpawn2.Text} - {subSkillSpawnPerc2.Text}";
+
+                subskillList.Add(subskill1);
+                subskillList.Add(subskill2);
+            }
+            else if (subSkillSpawn1.Visibility == Visibility.Visible && subSkillSpawn2.Visibility == Visibility.Visible && subSkillSpawn3.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+                var subskill2 = $"{subSkillSpawn2.Text} - {subSkillSpawnPerc2.Text}";
+                var subskill3 = $"{subSkillSpawn3.Text} - {subSkillSpawnPerc3.Text}";
+
+                subskillList.Add(subskill1);
+                subskillList.Add(subskill2);
+                subskillList.Add(subskill3);
+            }
+            else if (subSkillSpawn1.Visibility == Visibility.Visible && subSkillSpawn2.Visibility == Visibility.Visible && subSkillSpawn3.Visibility == Visibility.Visible && subSkillSpawn4.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+                var subskill2 = $"{subSkillSpawn2.Text} - {subSkillSpawnPerc2.Text}";
+                var subskill3 = $"{subSkillSpawn3.Text} - {subSkillSpawnPerc3.Text}";
+                var subskill4 = $"{subSkillSpawn4.Text} - {subSkillSpawnPerc4.Text}";
+
+                subskillList.Add(subskill1);
+                subskillList.Add(subskill2);
+                subskillList.Add(subskill3);
+                subskillList.Add(subskill4);
+            }
+            else if (subSkillSpawn1.Visibility == Visibility.Visible && subSkillSpawn2.Visibility == Visibility.Visible && subSkillSpawn3.Visibility == Visibility.Visible && subSkillSpawn4.Visibility == Visibility.Visible && subSkillSpawn5.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+                var subskill2 = $"{subSkillSpawn2.Text} - {subSkillSpawnPerc2.Text}";
+                var subskill3 = $"{subSkillSpawn3.Text} - {subSkillSpawnPerc3.Text}";
+                var subskill4 = $"{subSkillSpawn4.Text} - {subSkillSpawnPerc4.Text}";
+                var subskill5 = $"{subSkillSpawn5.Text} - {subSkillSpawnPerc5.Text}";
+
+                subskillList.Add(subskill1);
+                subskillList.Add(subskill2);
+                subskillList.Add(subskill3);
+                subskillList.Add(subskill4);
+                subskillList.Add(subskill5);
+            }
+            else if (subSkillSpawn1.Visibility == Visibility.Visible && subSkillSpawn2.Visibility == Visibility.Visible && subSkillSpawn3.Visibility == Visibility.Visible && subSkillSpawn4.Visibility == Visibility.Visible && subSkillSpawn5.Visibility == Visibility.Visible && subSkillSpawn6.Visibility == Visibility.Visible)
+            {
+                var subskill1 = $"{subSkillSpawn1.Text} - {subSkillSpawnPerc1.Text}";
+                var subskill2 = $"{subSkillSpawn2.Text} - {subSkillSpawnPerc2.Text}";
+                var subskill3 = $"{subSkillSpawn3.Text} - {subSkillSpawnPerc3.Text}";
+                var subskill4 = $"{subSkillSpawn4.Text} - {subSkillSpawnPerc4.Text}";
+                var subskill5 = $"{subSkillSpawn5.Text} - {subSkillSpawnPerc5.Text}";
+                var subskill6 = $"{subSkillSpawn6.Text} - {subSkillSpawnPerc6.Text}";
+
+                subskillList.Add(subskill1);
+                subskillList.Add(subskill2);
+                subskillList.Add(subskill3);
+                subskillList.Add(subskill4);
+                subskillList.Add(subskill5);
+                subskillList.Add(subskill6);
+            }
+
+            //subskillList.ToList<SubSkill>();
+
+            var finalsubskill = new List<SubSkill>();
+
+            //using (var db = new SkillMasteryContext())
+            //{
+
+            //    var skillIDfromNameQuery =
+            //        db.SkillToMasters.Where(c => c.SkillName == skillName).Where(c => c.PercToMast == percToMast).Select(c => c.SkillToMasterId).FirstOrDefault();
+
+            //    _userManager.AddSubSkill(skillIDfromNameQuery, finalsubskill);
+            //}
+
+            Window8 window8 = new Window8();
+            window8.Show();
+            this.Close();
         }
 
         private void Button_Click_2AddSubClass(object sender, RoutedEventArgs e)

@@ -67,9 +67,10 @@
 
 
         <Button Content="KILL" Grid.Column="5" HorizontalAlignment="Left" Margin="54,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" FontWeight="Normal" Click="Button_ClickExitSubSkill"/>
-        <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_1"/>
+        <Button Content="SAVE" Grid.Column="6" HorizontalAlignment="Left" Margin="0,76,0,0" Grid.Row="5" VerticalAlignment="Top" Grid.RowSpan="2" Height="38" Width="62" BorderBrush="#FF4BF718" Foreground="#FF4BF718" Background="#FF291515" BorderThickness="1,1,1,1" Click="Button_Click_1SAVESub"/>
 
-        <Label x:Name="UserIDtoStore9" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden"/>
+        <Label x:Name="UserIDtoStore9" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden" Foreground="Red"/>
+        <Label x:Name="SkillIDtoStore9" Content="Label" Grid.Column="6" HorizontalAlignment="Left" Margin="33,13,0,39" Grid.Row="1" Visibility="Hidden" Foreground="Red"/>
 
 
 

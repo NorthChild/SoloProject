@@ -18,6 +18,8 @@ namespace MasteryTrackedDB
         public int SubSkillID { get; set; }
         public int SkillToMasterId { get; set; }
 
+        public List<SubSkill> SubSkills { get; set; }
+
 
         public virtual SkillToMaster SkillToMaster { get; set; }
 

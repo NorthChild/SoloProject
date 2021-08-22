@@ -72,9 +72,6 @@ namespace MasteryTracker
             window8.UserIDtoStore8.Content = userIDToLink;
             this.Close();
 
-
-
-
         }
 
         private void Button_Click_1KILL(object sender, RoutedEventArgs e)
@@ -87,12 +84,46 @@ namespace MasteryTracker
         private void Button_ClickSUBSKILL(object sender, RoutedEventArgs e)
         {
             Window9 window9 = new Window9();
+
+            var userIDToLink = UserIDtoStore7.Content;
+            int userIDFinal = 0;
+
+
+            // add the skill info to the DB
+            string skillName = Convert.ToString(SkillNameRes.Text);
+            string totHrsSoFarRes = Convert.ToString(totHrsSoFarResult.Content);
+            string currentYrlHrsR = Convert.ToString(currentYrlHrsRes.Content);
+            string currentProgRe = Convert.ToString(currentProgrRes.Content);
+            string estYrsMasRe = Convert.ToString(estYrsMastRes.Content);
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                // find obj associated with userID
+                var userIdQuery =
+                from i in db.Users
+                where i.UserName == userIDToLink
+                select i.UsersID;
+
+                //int userIDFinal = 0;
+
+                foreach (var i in userIdQuery)
+                {
+                    userIDFinal += i;
+                }
+
+                userManager.AddSKill(userIDFinal, skillName, totHrsSoFarRes, currentYrlHrsR, currentProgRe, estYrsMasRe);
+                db.SaveChanges();
+
+            }
+
             window9.Show();
 
-            var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
+            //var userIDpage7 = Convert.ToString(UserIDtoStore7.Content);
             var percetangeToAttribute = Convert.ToString(currentProgrRes.Content);
 
-            window9.UserIDtoStore9.Content = userIDpage7;
+            window9.UserIDtoStore9.Content = userIDToLink;
+            window9.SkillIDtoStore9.Content = skillName; 
             window9.totalPercentageCalculated.Text = percetangeToAttribute; 
 
             this.Close();

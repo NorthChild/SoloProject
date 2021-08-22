@@ -85,6 +85,24 @@ namespace MTBusiness
 
         }
 
+        public void AddSubSkill(int skillId, List<SubSkill> subskill)
+        {
+
+
+
+            using (var db = new SkillMasteryContext())
+            {
+
+                var newSubskill = new SubSkill() { SkillToMasterId = skillId, SubSkills = subskill };
+
+                db.SubSkill.Add(newSubskill);
+                db.SaveChanges();
+
+
+            }
+
+        }
+
 
         // update skill
         public bool UpdateSkill(int userId, string skillName, string newSkillName, string totSkillHrs, string currYrHrs, string percToMast, string estYrsToMast)
