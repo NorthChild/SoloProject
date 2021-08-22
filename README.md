@@ -18,7 +18,7 @@ SOLO PROJECT
 
     ​			
 
-  ![](SoloProject\Project Boards\KabanBoard_DaybyDay\Day 1.png)
+  ![](\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 1.png)
 
 - DAY 1 
 
