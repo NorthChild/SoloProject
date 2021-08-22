@@ -18,10 +18,7 @@ SOLO PROJECT
 
     ​			
 
-  ![](\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 1.png)
-  
-  
-  [My image](NorthChild.github.com\SoloProject\Project Boards\KabanBoard_DaybyDay\Day 1.png)
+ Project Boards/KabanBoard_DaybyDay/Day 1.png
   
 
 - DAY 1 
