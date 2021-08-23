@@ -79,6 +79,7 @@ SOLO PROJECT
 
     ​			Managed to complete a good portion of the remaining tasks as well as completing some User stories and Tests on the DB, finding moving between tasks when confronted by a roadblock very useful.
 
+
 <img width="1440" alt="https://github.com/NorthChild/SoloProject/blob/main/Project%20Boards/KabanBoard_DaybyDay/Day%203.png">
 
 - DAY 4
