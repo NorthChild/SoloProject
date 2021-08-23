@@ -57,6 +57,8 @@ SOLO PROJECT
   - RETROSPECTIVES:
 
     ​			Managed to deliver MVP to its base requirements, have been added functionality to the app by Product Owner, it will require an additional window, DB adaptation as well as extension from the original app logic
+    
+    
 <img width="1440" alt="mastery_calc_1" src="https://github.com/NorthChild/SoloProject/blob/main/Project%20Boards/KabanBoard_DaybyDay/Day%202.png">
 
 - DAY 3
