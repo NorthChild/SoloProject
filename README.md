@@ -20,6 +20,8 @@ SOLO PROJECT
 
  https://github.com/NorthChild/SoloProject/blob/f8ea5f7ebedba471a417833832b492c58fb9c424/Project%20Boards/KabanBoard_DaybyDay/Day%201.png
  
+ <img width="1440" alt="mastery_calc_1" src="https://github.com/NorthChild/SoloProject/blob/main/Project%20Boards/KabanBoard_DaybyDay/Day%201.png">
+ 
  
   
 
