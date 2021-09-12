@@ -28,8 +28,6 @@ namespace MasteryTracker.Views
         {
             InitializeComponent();
             PopulateSkillListBox();
-
-            
         }
 
         private void PopulateSkillListBox()
@@ -79,11 +77,6 @@ namespace MasteryTracker.Views
 
             var objtoUpdate = ((SkillToMaster)ListBoxResult.SelectedItem);
 
-
-            // take skill id and user id send it to update page (reflection of mainWindow)
-            // on main page recalculate progress
-            // call skillupdate method on update page
-            // no option for kill, in this page u can only proceed by updating the skill
             
 
 
@@ -93,7 +86,6 @@ namespace MasteryTracker.Views
         {
 
             var userId = Convert.ToInt32(UserIDtoStore8.Content);
-            //var itemToUpd = Convert.ToString(ListBoxResult.SelectedItem);
 
             var objtoUpdate = ((SkillToMaster)ListBoxResult.SelectedItem);
             _userManager.DeleteSkill(objtoUpdate.SkillToMasterId);

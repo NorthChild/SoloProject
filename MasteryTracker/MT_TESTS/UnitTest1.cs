@@ -100,8 +100,6 @@ namespace MT_TESTS
 
 
         // test new skill created in db
-
-
         // 1
         [Test]
         public void SavedSkillProgressIsAddedToDb()
@@ -157,7 +155,6 @@ namespace MT_TESTS
 
                 Assert.That(counterBefore, Is.Not.EqualTo(counterAfter));
             }
-
         }
 
 
@@ -267,7 +264,7 @@ namespace MT_TESTS
 
                 var queryCountOfSkillsWithUSerId2 = db.SkillToMasters.Where(c => c.UsersID == 88).Count();
 
-                Assert.That(queryCountOfSkillsWithUSerId == queryCountOfSkillsWithUSerId2);
+                Assert.That(queryCountOfSkillsWithUSerId != queryCountOfSkillsWithUSerId2);
             }
         }
 

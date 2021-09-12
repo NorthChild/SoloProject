@@ -4,12 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MasteryTrackedDB;
+using MasteryTrackedDB.Services;
 using MTBusiness;
 
 namespace MTBusiness
 {
     public class UserManager
     {
+
+        private IUserService _service;
+
+        public UserManager()
+        {
+            _service = new UserService();
+        }
+
+        public UserManager(IUserService service)
+        {
+
+            if (service == null)
+            {
+                throw new ArgumentException("IUserService object cannot be null");
+            }
+
+            _service = service;
+        }
+
+
+
 
         public void AddUser(string userName, string passWord)
         {
@@ -65,7 +87,6 @@ namespace MTBusiness
                 {
                     return db.SkillToMasters.Where(c => c.UsersID == userIDFinal).OrderBy(c => c.SkillName).ToList();
                 }
-
                 
             }
         }

@@ -11,7 +11,16 @@ namespace MasteryTrackedDB
     public class SkillMasteryContext : DbContext
     {
 
-        
+        public SkillMasteryContext()
+        {
+
+        }
+
+        public SkillMasteryContext(DbContextOptions<SkillMasteryContext> options) : base(options)
+        {
+
+        }
+            
 
         public DbSet<Users> Users { get; set; }
         public DbSet<SkillToMaster> SkillToMasters { get; set; }
